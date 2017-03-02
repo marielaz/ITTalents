@@ -41,7 +41,11 @@ public class Client {
 		return true;
 	}
 	
-	public void makeOrder(){
-		//TODO
+	public void makeOrder(Product p){
+		this.cart.addProduct(p);
+	}
+	public void pay(){
+		double payCheck = this.cart.getTotalSum();
+		this.money -= payCheck;
 	}
 }
