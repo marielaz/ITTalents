@@ -54,8 +54,7 @@ public class Client {
 		this.cart.addProduct(p);
 	}
 	public void pay(){
-		double payCheck = this.cart.getTotalSum();
-		this.money -= payCheck;
+		this.cart.payCheck();
 	}
 	public void setMoney(double money) {
 		this.money = money;
