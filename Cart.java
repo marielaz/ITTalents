@@ -10,6 +10,18 @@ public class Cart {
 	
 	
 	public void addProduct(Product p){
-		//TODO
+		if(!this.products.contains(p)){
+			this.products.add(p);
+			p.setQuantity(p.getQuantity()+1);
+
+		}
+		p.setQuantity(p.getQuantity()+1);
+	}
+	
+	public void removeProduct (Product p){
+		if(this.products.contains(p)){
+			this.products.remove(p);
+		}
+		return;
 	}
 }
