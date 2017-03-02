@@ -10,7 +10,7 @@ public class Cart {
 	
 	
 	public void addProduct(Product p){
-		if(!this.products.contains(p)){
+		if(!this.products.contains(p) && p != null){
 			this.products.add(p);
 			p.setQuantity(p.getQuantity()+1);
 
