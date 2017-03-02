@@ -3,13 +3,22 @@ public class Client {
 
 	private String username;
 	private String name;
-	private String surname;
 	private String address;
 	private String password;
 	private String phoneNumber;
 	private Cart cart;
 	private String email;
+	private double money;
 	
+	public Client(String username, String name, String address, String password, String phoneNumber, String email) {
+		super();
+		this.username = username;
+		this.name = name;
+		this.address = address;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
+		this.email = email;
+	}
 	
 	@Override
 	public int hashCode() {
@@ -47,5 +56,12 @@ public class Client {
 	public void pay(){
 		double payCheck = this.cart.getTotalSum();
 		this.money -= payCheck;
+	}
+	public void setMoney(double money) {
+		this.money = money;
+	}
+
+	public double getMoney() {
+		return money;
 	}
 }
