@@ -31,4 +31,10 @@ public class Cart {
 	public void setTotalSum(double totalSum) {
 		this.totalSum = totalSum;
 	}
+	public void payCheck(){
+		for(Product p : products){
+			double price = p.getPrice()*p.getQuantity();
+			if( price < client.getMoney()){
+				client.setMoney(client.getMoney() - price);
+			}
 }
