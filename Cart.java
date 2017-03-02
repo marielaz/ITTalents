@@ -24,4 +24,11 @@ public class Cart {
 		}
 		return;
 	}
+	public double getTotalSum() {
+		return totalSum;
+	}
+
+	public void setTotalSum(double totalSum) {
+		this.totalSum = totalSum;
+	}
 }
